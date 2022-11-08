@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className="navbar bg-black">
+        <div className="navbar bg-black px-5  ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -17,8 +17,9 @@ const Header = () => {
         
       </ul>
     </div>
-    <Link to='/'>
-        <img  className= 'h-20 w-25 rounded-2xl' src='https://png.pngtree.com/png-clipart/20200224/original/pngtree-digital-dslr-camera-icon-logo-symbol-vector-design-png-image_5208933.jpg' alt=''></img>
+    <img  className= 'h-20 w-25 rounded-2xl' src='https://png.pngtree.com/png-clipart/20200224/original/pngtree-digital-dslr-camera-icon-logo-symbol-vector-design-png-image_5208933.jpg' alt=''></img>
+    <Link className='btn btn-ghost normal-case text-xl text-accent' to='/'>
+    Wed-Snap
     </Link>
   </div>
 
