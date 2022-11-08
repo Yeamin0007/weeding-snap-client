@@ -6,10 +6,12 @@ import Header from '../Components/shared/Header/Header';
 const Main = () => {
     return (
         <div>
-            <div className='first max-w-screen-2xl mx-auto'>
+            <div className='first'>
         
+        <div className='max-w-screen-2xl mx-auto'>
         <Header></Header>
         <Outlet></Outlet>
+        </div>
 
         <div className='second'>
         <Footer></Footer>
