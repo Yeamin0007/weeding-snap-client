@@ -12,7 +12,7 @@ const HomeService = () => {
     },[])
 
     return (
-        <div>
+        <div className='max-w-screen-2xl mx-auto'>
             <div className='text-center'>
                 <h2 className='font-bold text-4xl text-silve my-8'>MY SERVICES</h2>
             <p className='text-xl mb-8'>I love capturing memories. That look, that smile, those tears, that brief moment frozen in time. Real memories, real emotions.</p>

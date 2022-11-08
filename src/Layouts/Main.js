@@ -8,7 +8,7 @@ const Main = () => {
         <div>
             <div className='first'>
         
-        <div className='max-w-screen-2xl mx-auto'>
+        <div className=''>
         <Header></Header>
         <Outlet></Outlet>
         </div>
