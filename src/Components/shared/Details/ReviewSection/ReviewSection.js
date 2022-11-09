@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Contexts/AuthProvider';
-import ReviewCard from '../../ReviewCard/ReviewCard';
+
 import ReviewCardTwo from '../../ReviewCardTwo/ReviewCardTwo';
 
 const ReviewSection = ({serviceInfo}) => {
@@ -56,7 +56,7 @@ const ReviewSection = ({serviceInfo}) => {
     return (
         <div>
             <h2 className="text-4xl text-center my-2">Client's Review</h2>
-            <div className='max-w-screen-2xl mx-auto justify-center'>
+            <div className='max-w-screen-2xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                 {
                     userReviews.map(userReview => <ReviewCardTwo
                         key={userReview._id}

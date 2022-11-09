@@ -17,7 +17,7 @@ const menuItems = <>
 {
     user?.email ?
         <>
-            <li><Link to='/'>Add Service</Link></li>
+            <li><Link to='/addServices'>Add Service</Link></li>
             <li><Link to='/myReviews'>My Reviews</Link></li>
         </>
         :

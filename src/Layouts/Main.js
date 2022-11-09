@@ -8,10 +8,10 @@ const Main = () => {
         <div>
             <div className='first'>
         
-        <div className=''>
+        
         <Header></Header>
         <Outlet></Outlet>
-        </div>
+        
 
         <div className='second'>
         <Footer></Footer>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
-import { useLoaderData } from 'react-router-dom';
+
 
 const InfoSection = ({serviceInfo}) => {
-    const {title, img, name , price, description, rating} = serviceInfo;
+    const {img, name , price, description, rating} = serviceInfo;
     return (
         <div className="card lg:card-side bg-slate-700 shadow-xl">
   <figure><img src={img} alt="Album"/></figure>
