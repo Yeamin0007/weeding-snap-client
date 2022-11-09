@@ -34,7 +34,7 @@ const MyReviews = () => {
     }, [user?.email])
 
     return (
-        <div className='max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-8'>
             {
                 myReviews.map(myReview => <ReviewCard
                     key={myReview._id}

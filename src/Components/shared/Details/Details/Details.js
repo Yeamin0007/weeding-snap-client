@@ -9,7 +9,7 @@ const Details = () => {
     
     return (
         <div>
-            <div className='max-w-screen-2xl mx-auto'>
+            <div className='max-w-screen-2xl mx-auto mt-8'>
                 <InfoSection serviceInfo={serviceInfo}></InfoSection>
             </div>
             <div>

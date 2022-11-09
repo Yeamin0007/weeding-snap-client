@@ -40,7 +40,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/addServices',
-                element: <AddServices></AddServices>
+                element: <AddServices></AddServices>,
+                
             },
             {
                 path: '/services/:id',

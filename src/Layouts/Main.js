@@ -2,6 +2,7 @@ import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Components/shared/Footer/Footer';
 import Header from '../Components/shared/Header/Header';
+import './Main.css'
 
 const Main = () => {
     return (

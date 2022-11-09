@@ -54,8 +54,8 @@ const ReviewSection = ({serviceInfo}) => {
     }
 
     return (
-        <div>
-            <h2 className="text-4xl text-center my-2">Client's Review</h2>
+        <div className='mt-6 max-w-screen-2xl mx-auto'>
+            <h2 className="text-4xl text-center my-2 font-bold">Client's Review</h2>
             <div className='max-w-screen-2xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                 {
                     userReviews.map(userReview => <ReviewCardTwo
@@ -65,11 +65,13 @@ const ReviewSection = ({serviceInfo}) => {
                     </ReviewCardTwo>)
                 }
             </div>
-            <form onSubmit={reviewHandler}>
-                <h2 className="text-4xl">Reviews</h2>
+            <form className='mt-6' onSubmit={reviewHandler}>
+                <h2 className="text-xl text-center my-4">Share Your True Thoughts</h2>
                 <textarea name="review" className="textarea textarea-accent h-32 w-full" placeholder="Your Review" required></textarea>
 
+                <div className='flex justify-center my-4'>
                 <input className='btn' type="submit" value="Add Review" />
+                </div>
             </form>
         </div>
     );
