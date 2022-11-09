@@ -2,6 +2,7 @@ import React from 'react';
 import { FaAngleRight } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from 'react-router-dom';
 
 const HomeServCard = ({service}) => {
     const {_id, img, name, price, description} = service;
@@ -33,7 +34,7 @@ const HomeServCard = ({service}) => {
   <p>{description.slice(0, 90)}...</p>
   <div className="card-actions justify-end">
   <p className='font-bold mt-2'>Tk. {price}</p>
-    <button className="btn btn-outline ">Details<FaAngleRight></FaAngleRight></button>
+    <Link to={`/services/${_id}`}><button className="btn btn-outline ">Details<FaAngleRight></FaAngleRight></button></Link>
   </div>
 </div>
 </div>

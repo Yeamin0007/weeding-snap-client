@@ -13,12 +13,12 @@ const Header = () => {
 }
 const menuItems = <>
 <li><Link to='/'>Home</Link></li>
-<li><Link to='/blog'>Blog</Link></li>
+<li><Link to='/blogs'>Blog</Link></li>
 {
     user?.email ?
         <>
             <li><Link to='/'>Add Service</Link></li>
-            <li><Link to='/'>My Reviews</Link></li>
+            <li><Link to='/myReviews'>My Reviews</Link></li>
         </>
         :
         <></>

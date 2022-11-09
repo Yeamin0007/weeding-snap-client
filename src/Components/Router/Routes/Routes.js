@@ -3,8 +3,10 @@ import Main from "../../../Layouts/Main";
 import Blogs from "../../pages/Blogs/Blogs";
 import Home from "../../pages/Home/Home/Home";
 import Login from "../../pages/Login/Login";
+import MyReviews from "../../pages/MyReviews/MyReviews";
 import Register from "../../pages/Register/Register";
 import Services from "../../pages/Services/Services/Services";
+import Details from "../../shared/Details/Details/Details";
 
 export const routes = createBrowserRouter([
     {
@@ -30,6 +32,15 @@ export const routes = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs></Blogs>
+            },
+            {
+                path: '/myReviews',
+                element: <MyReviews></MyReviews>
+            },
+            {
+                path: '/services/:id',
+                element: <Details></Details>,
+                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
             },
             
         ]
