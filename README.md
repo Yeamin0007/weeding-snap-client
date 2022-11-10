@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Project Name- Wedding Snap
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Live Link 
+https://wedding-snap-766bd.web.app/
 
-## Available Scripts
+# About
+This is a wedding photoghrapher site, where you can visit by creating an accout. Here I added different wedding photography services with special offers. You can also add, delete or update your reviews here.
 
-In the project directory, you can run:
+## Specially Used
+Node Js
 
-### `npm start`
+ ### Database
+  MongoDB
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ ## Packages
+ During this project I Used :
+ 1. React-Router-Dom
+ 2. Tailwind-css
+ 3. React-Icons
+ 4. React-Toastify
+ 5. Daisy ui
+ 6. React-Photo-view
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ ## Authentication
+For authentication I used firebase authetication.
+And also used firebase to host this project.
+ 
+ ## Server Loading
+Here I used "vercel" to make a link that helped me to make the local data, global.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Work Process
+First made a Navbar
+Then Creat An Home Page devides by different sections. on service Section I loaded service and limit it to 3. and added a show more button
+by clicking show more button you will find the services section with different services. you view ther details there explore many thing. Just go to the site see what is waiting for you

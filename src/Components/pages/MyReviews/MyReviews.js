@@ -18,7 +18,7 @@ const MyReviews = () => {
     const handleDeletOne = _id =>{
         const proceed = window.confirm('Are you sure, you want to delete this review comment?');
         if(proceed){
-            fetch(`http://localhost:5000/reviews/${_id}`,{
+            fetch(`https://wedding-snap-server.vercel.app/reviews/${_id}`,{
                 method: 'DELETE'
             })
             .then(res => res.json())
@@ -45,7 +45,7 @@ const MyReviews = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`,{
+        fetch(`https://wedding-snap-server.vercel.app/reviews?email=${user?.email}`,{
             headers: {
                 authorization: `Bearer ${localStorage.getItem('site-token')} `
             }

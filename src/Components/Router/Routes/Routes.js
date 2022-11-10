@@ -50,13 +50,13 @@ export const routes = createBrowserRouter([
             {
                 path: '/update/:id',
                 element: <UpdatePage></UpdatePage>,
-                loader: ({params}) => fetch(`http://localhost:5000/reviews/${params.id}`)
+                loader: ({params}) => fetch(`https://wedding-snap-server.vercel.app/reviews/${params.id}`)
                 
             },
             {
                 path: '/services/:id',
                 element: <Details></Details>,
-                loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+                loader: ({params})=> fetch(`https://wedding-snap-server.vercel.app/services/${params.id}`)
             },
             
         ]

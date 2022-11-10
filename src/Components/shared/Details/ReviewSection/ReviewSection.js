@@ -15,7 +15,7 @@ const ReviewSection = ({serviceInfo}) => {
     const[userReviews, setReviews] =useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review?serviceId=${_id}`)
+        fetch(`https://wedding-snap-server.vercel.app/review?serviceId=${_id}`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [_id])
@@ -37,7 +37,7 @@ const ReviewSection = ({serviceInfo}) => {
             photoURL,
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://wedding-snap-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

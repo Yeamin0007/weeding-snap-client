@@ -14,7 +14,7 @@ const UpdatePage = () => {
 
    const handleUpdate = event => {
        event.preventDefault();
-       fetch(`http://localhost:5000/reviews/${savedReview._id}`,{
+       fetch(`https://wedding-snap-server.vercel.app/reviews/${savedReview._id}`,{
         method: 'PATCH',
         headers:{
             'content-type' : 'application/json'
