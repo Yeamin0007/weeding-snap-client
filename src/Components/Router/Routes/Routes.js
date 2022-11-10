@@ -6,7 +6,6 @@ import Error from "../../pages/Error/Error";
 import Home from "../../pages/Home/Home/Home";
 import Login from "../../pages/Login/Login";
 import UpdatePage from "../../pages/UpdatePage/UpdatePage";
-import Modal from "../../pages/UpdatePage/UpdatePage";
 import MyReviews from "../../pages/MyReviews/MyReviews";
 import Register from "../../pages/Register/Register";
 import Services from "../../pages/Services/Services/Services";

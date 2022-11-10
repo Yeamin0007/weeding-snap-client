@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import useTitle from "../../../Hooks/useTitle";
 
 
 
 const UpdatePage = () => {
+    useTitle('Update')
    const savedReview = useLoaderData();
    const[userReviews, setReviews] =useState(savedReview);
 
@@ -13,7 +15,7 @@ const UpdatePage = () => {
    const handleUpdate = event => {
        event.preventDefault();
        fetch(`http://localhost:5000/reviews/${savedReview._id}`,{
-        method: 'PUT',
+        method: 'PATCH',
         headers:{
             'content-type' : 'application/json'
         },
@@ -36,7 +38,7 @@ const UpdatePage = () => {
 
     return (
         <div>
-           <h2> review : {savedReview.name}</h2> 
+
            <form onSubmit={handleUpdate} className='mt-6' >
                 <h2 className="text-xl text-center my-4">Share Your True Thoughts</h2>
                 <textarea onChange={handleChange} name="review" defaultValue={savedReview.review} className="textarea textarea-accent h-32 w-96" placeholder="Your Review" required></textarea>

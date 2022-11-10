@@ -59,7 +59,7 @@ const ReviewSection = ({serviceInfo}) => {
                         theme: "colored",
                     });
                     form.reset();
-                    setReviews([...userReviews, userReview]);
+                    setReviews([userReview, ...userReviews ]);
                 }
             })
             .catch(error => console.error(error));

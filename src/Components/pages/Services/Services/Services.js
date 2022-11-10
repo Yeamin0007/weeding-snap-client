@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import HomeServCard from '../../../shared/HomeServCard/HomeServCard';
 import ClipLoader from "react-spinners/ClipLoader";
+import useTitle from '../../../../Hooks/useTitle';
 
 
 const Services = () => {
+    useTitle('Services')
 
     const [services, setServices] = useState([]);
     useEffect(()=>{
