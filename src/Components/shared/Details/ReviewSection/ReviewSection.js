@@ -3,6 +3,7 @@ import { AuthContext } from '../../../Contexts/AuthProvider';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ReviewCardTwo from '../../ReviewCardTwo/ReviewCardTwo';
+import { Link } from 'react-router-dom';
 
 const ReviewSection = ({serviceInfo}) => {
 
@@ -76,7 +77,10 @@ const ReviewSection = ({serviceInfo}) => {
                     </ReviewCardTwo>)
                 }
             </div>
-            <form className='mt-6' onSubmit={reviewHandler}>
+            {
+                user?.email?
+                <>
+                <form className='mt-6' onSubmit={reviewHandler}>
                 <h2 className="text-xl text-center my-4">Share Your True Thoughts</h2>
                 <textarea name="review" className="textarea textarea-accent h-32 w-full" placeholder="Your Review" required></textarea>
 
@@ -84,6 +88,12 @@ const ReviewSection = ({serviceInfo}) => {
                 <input className='btn' type="submit" value="Add Review" />
                 </div>
             </form>
+                </>
+                :
+                <>
+                <p className='text-3xl my-4 font-bold'>To Review Please <Link to='/login' className=' text-accent btn'>Login</Link> First</p>
+                </>
+            }
             <ToastContainer></ToastContainer>
         </div>
     );

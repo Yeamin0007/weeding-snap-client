@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaEdit } from 'react-icons/fa';
 import { MdDelete } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 
 
-const ReviewCard = ({myReview, handleDeletOne}) => {
+const ReviewCard = ({myReview, handleDeletOne, handleUpdate}) => {
     const {_id, displayName, email, review, photoURL} = myReview;
 
     
@@ -24,7 +25,7 @@ const ReviewCard = ({myReview, handleDeletOne}) => {
     <p>{email}</p>
     <p>{review}</p>
     <div className='flex justify-end '>
-         <button className='btn btn-ghost'><FaEdit className='mt-1'></FaEdit></button>
+         <Link to={`/update/${_id}`}><button  className='btn btn-ghost'><FaEdit className='mt-1'></FaEdit></button></Link>
          <button onClick={()=> handleDeletOne(_id)} className='btn btn-ghost'><MdDelete className=' text-xl'></MdDelete></button>
          
          
