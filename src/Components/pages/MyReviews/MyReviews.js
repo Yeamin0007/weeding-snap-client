@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Contexts/AuthProvider';
 import ReviewCard from '../../shared/ReviewCard/ReviewCard';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -13,16 +15,27 @@ const MyReviews = () => {
         const proceed = window.confirm('Are you sure, you want to delete this review comment?');
         if(proceed){
             fetch(`http://localhost:5000/reviews/${_id}`,{
-                method: 'Delete'
+                method: 'DELETE'
             })
             .then(res => res.json())
             .then(data =>{
                 console.log(data);
                 if (data.deletedCount > 0) {
-                    alert('Deleted Successfully');
+                    toast.success('Review Deleted!', {
+                        position: "top-center",
+                        autoClose: 2500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
+
                     const remaining = myReviews.filter(review => review._id !== _id);
                     setMyReviews(remaining);
                 }
+                
             })
         }
     }
@@ -43,6 +56,7 @@ const MyReviews = () => {
                 >
                 </ReviewCard>)
             }
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

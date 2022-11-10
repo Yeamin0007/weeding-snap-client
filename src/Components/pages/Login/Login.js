@@ -29,7 +29,7 @@ const Login = () => {
             navigate(from, {replace: true});
         })
         .catch(error=> {
-            console.error(error)
+            console.error(error);
             setError(error.message);
         });
     }
@@ -51,10 +51,10 @@ const Login = () => {
         <div className="hero w-full my-20">
             <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
                 <div className="text-center lg:text-left">
-                    <img className='w-3/4' src='https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg?w=2000' alt="" />
+                    <img className='w-full h-96 border-4 border-accent rounded-3xl' src='https://c8.alamy.com/comp/T6NC3G/a-modern-looking-polaroid-camera-in-silver-and-black-color-vector-color-drawing-or-illustration-T6NC3G.jpg' alt="" />
                 </div>
-                <div className="card flex-shrink-0 w-full  shadow-2xl max-w-md bg-emerald-200 py-20">
-                    <h1 className="text-5xl text-center font-bold text- divide-cyan-900">Login</h1>
+                <div className="card flex-shrink-0 w-full  shadow-2xl max-w-md bg-slate-700 py-20">
+                    <h1 className="text-5xl text-center font-bold text-accent">Login</h1>
                     <form onSubmit={handleLogin} className="card-body">
                         <div className="form-control">
                             <label className="label">
@@ -74,12 +74,13 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-accent" type="submit" value="Login" />
                         </div>
-                        <div className="form-control mt-6">
-                        <button onClick={handleGoogleSignIn} className="btn btn-outline"><FaGoogle className='text-cyan-900 mx-2'></FaGoogle>Login with Google</button>
-                        </div>
+                        
                     </form>
-                    <p className='text-center'>New to Wedding Snap? <Link className='text-divide-cyan-900 font-bold' to="/register">Sign Up</Link> </p>
-                    <small className='text-red-700'>
+                    <div className="form-control my-2 mx-8">
+                        <button onClick={handleGoogleSignIn} className="btn btn-outline"><FaGoogle className='text-accent mx-2'></FaGoogle>Login with Google</button>
+                        </div>
+                    <p className='text-center'>New to Wedding Snap? <Link className='text-accent font-bold' to="/register">Sign Up</Link> </p>
+                    <small className='text-red-700 text-center'>
                         {error}
                     </small>
                 </div>

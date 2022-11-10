@@ -9,6 +9,7 @@ const AboutMe = () => {
 I know all about your plans – below is a little run down on what you can expect on the wedding day. Don't worry, I will capture the emotions and details of the day so you can remember them always. I m sure u don’ want to miss the details ... <br/> "Just Contact Me"
 </p>
             </div>
+            <hr/>
         </div>
     );
 };

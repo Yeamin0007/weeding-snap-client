@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Contexts/AuthProvider';
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ReviewCardTwo from '../../ReviewCardTwo/ReviewCardTwo';
 
 const ReviewSection = ({serviceInfo}) => {
@@ -46,8 +47,18 @@ const ReviewSection = ({serviceInfo}) => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Review Added Successfully')
+                    toast.success('Review Added.', {
+                        position: "top-center",
+                        autoClose: 2500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
                     form.reset();
+                    setReviews([...userReviews, userReview]);
                 }
             })
             .catch(error => console.error(error));
@@ -55,7 +66,7 @@ const ReviewSection = ({serviceInfo}) => {
 
     return (
         <div className='mt-6 max-w-screen-2xl mx-auto'>
-            <h2 className="text-4xl text-center my-2 font-bold">Client's Review</h2>
+            <h2 className="text-4xl text-center my-2 font-mono">Client's Review</h2>
             <div className='max-w-screen-2xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 '>
                 {
                     userReviews.map(userReview => <ReviewCardTwo
@@ -73,6 +84,7 @@ const ReviewSection = ({serviceInfo}) => {
                 <input className='btn' type="submit" value="Add Review" />
                 </div>
             </form>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };

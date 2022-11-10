@@ -28,9 +28,9 @@ const menuItems = <>
 const menuSignInOut = <>
 {
     user?.email ?
-        <button onClick={handleLogOut} className="btn">Logout</button>
+        <button onClick={handleLogOut} className="btn btn-accent">Logout</button>
         :
-        <Link to='/login'><button className="btn">Login</button></Link>
+        <Link to='/login'><button className="btn btn-accent">Login</button></Link>
 }
 </>
 

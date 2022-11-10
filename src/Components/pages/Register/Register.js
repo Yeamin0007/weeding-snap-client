@@ -46,10 +46,10 @@ const Register = () => {
         <div className="hero w-full my-20">
         <div className="hero-content grid gap-20 md:grid-cols-2 flex-col lg:flex-row">
             <div className="text-center lg:text-left">
-                <img className='w-3/4' src='https://img.freepik.com/free-vector/mobile-login-concept-illustration_114360-135.jpg?w=2000' alt="" />
+                <img className='w-3/4 border-4 border-accent rounded-3xl' src='https://images.unsplash.com/photo-1607106924440-59f9ede7050c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmxhY2slMjBjYW1lcmF8ZW58MHx8MHx8&w=1000&q=80' alt="" />
             </div>
-            <div className="card flex-shrink-0 w-full  shadow-2xl max-w-md bg-emerald-200 py-20">
-                <h1 className="text-5xl text-center font-bold text- divide-cyan-900">Sign Up</h1>
+            <div className="card flex-shrink-0 w-full  shadow-2xl max-w-md bg-slate-700 py-20">
+                <h1 className="text-5xl text-center font-bold text-accent">Sign Up</h1>
                 <form onSubmit={handleSubmit} className="card-body">
                     <div className="form-control">
                         <label className="label">
@@ -62,7 +62,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" name='photoURL' placeholder="photoURL" className="input input-bordered" />
+                        <input type="text" name='photoURL' placeholder="photoURL" className="input input-bordered" required/>
                     </div>
 
                     <div className="form-control">
@@ -85,7 +85,7 @@ const Register = () => {
                         <input className="btn btn-accent" type="submit" value="Sign Up" />
                     </div>
                 </form>
-                <p className='text-center'>Already Have an Accout? <Link className='text- divide-cyan-900 font-bold' to="/login">Login</Link> </p>
+                <p className='text-center'>Already Have an Accout? <Link className='text-accent font-bold' to="/login">Login</Link> </p>
                 <small className='text-red-700'>
                 {error}
             </small>

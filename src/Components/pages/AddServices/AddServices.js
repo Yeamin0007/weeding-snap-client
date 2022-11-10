@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaCamera } from 'react-icons/fa';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const AddServices = () => {
@@ -33,7 +35,16 @@ const AddServices = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Service Added Successfully')
+                    toast.info('Service Added Successfully.', {
+                        position: "top-center",
+                        autoClose: 2500,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        theme: "colored",
+                    });
                     form.reset();
                 }
             })
@@ -55,7 +66,7 @@ const AddServices = () => {
                 
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 '>
                     <input name="name" type="text" placeholder="Service Name" className="input input-accent w-full  input-bordered" required />
-                    <input name="img" type="text" placeholder="ImageUrl" className="input input-accent w-full  input-bordered" requard/>
+                    <input name="img" type="text" placeholder="ImageUrl" className="input input-accent w-full  input-bordered" requiard/>
                     <input name="price" type="text" placeholder="Price" className="input input-accent w-full  input-bordered" required />
                     <input name="rating" type="text" placeholder="Rating" className="input input-accent w-full  input-bordered" required />
                     <textarea name="description" type="text" className="textarea textarea-accent textarea-bordered h-24 w-full m" placeholder="Service Description" required></textarea>
@@ -64,8 +75,9 @@ const AddServices = () => {
               <input className='btn' type="submit" value="Add Your Service" />
               </div>
             </form>
-        </div>
             
+        </div>
+        <ToastContainer></ToastContainer>
         </div>
     );
 };
