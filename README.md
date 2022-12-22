@@ -31,4 +31,4 @@ Here I used "vercel" to make a link that helped me to make the local data, globa
 ### Work Process
 First made a Navbar
 Then Creat An Home Page devides by different sections. on service Section I loaded service and limit it to 3. and added a show more button
-by clicking show more button you will find the services section with different services. you view ther details there explore many thing. Just go to the site see what is waiting for you
+by clicking show more button you will find the services section with different services. you view ther details there explore many thing. Just go to the site see what is waiting for you.
